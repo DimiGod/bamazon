@@ -1,17 +1,27 @@
 DROP DATABASE IF EXISTS bamazon;
+
 CREATE DATABASE bamazon;
-USE bamazon; 
+
+USE bamazon;
 
 CREATE TABLE products (
-  id INT NOT NULL AUTO_INCREMENT,
-  product_name VARCHAR(255) NOT NULL,
-  department_name VARCHAR(255) NOT NULL,
-  price DECIMAL (10, 2) NOT NULL,
-  stock_quantity INT (10) NOT NULL,
-  PRIMARY KEY (id)
+  item_id INT NOT NULL AUTO_INCREMENT,
+  product_name VARCHAR(45) NULL,
+  department_name VARCHAR(45) NULL,
+  price DECIMAL(10,2) NULL,
+  stock_quantity INT NULL,
+  PRIMARY KEY (item_id)
 );
 
-INSERT INTO products (product_name, department_name, price, stock_quantity) 
-VALUES ("Gucci Slides", "Men's Shoes", 350.00, 25), ("Yeezy 350's", "Men's Shoes", 249.99, 100),  ("Christmas Sweater", "Women's Clothing", 49.99, 25),  ("GoPro", "Photography", 159.99, 10),  ("Masking Tape", "Tools/Utilities", 6.99, 75),  ("Goku Action Figure", "Toys", 15.99, 50),  ("Protein Powder", "Vitamins", 64.99, 20),  ("Backpack", "School Supplies", 79.99, 50),  ("Macbook Pro", "Computers", 1449.99, 100),  ("Leather Wallet", "Men's Accessories", 14.99, 100);
-
-SELECT * FROM products
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("Laptop", "Electronics", 1999, 600), 
+       ("Go-Pro", "Photography", 255, 72),
+       ("Goku Action Figure", "Toys", 15, 40),
+       ("Protein Powder", "Vitamins", 60, 44),
+       ("Boots", "Men's Footwear", 120, 22),
+       ("Fouton", "Furniture", 135, 12),
+       ("Dragonball Xenoverse 2", "Gaming", 50, 100),
+       ("Snickers", "Candy", 2.95, 200),
+       ("Oakley Sun Glasses", "Fashion Accessories", 207, 50),
+       ("Versache Shirt", "Clothing", 2900, 150)
+       ;
